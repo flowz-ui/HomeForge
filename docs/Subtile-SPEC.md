@@ -1,4 +1,4 @@
-# HomeForge – Faz 1 Spec (v0.1)
+# Subtile – Faz 1 Spec (v0.1)
 
 Android ana ekran widget editörü + resmi widget koleksiyonu. Topluluk Faz 2.
 
