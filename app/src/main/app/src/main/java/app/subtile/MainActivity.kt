@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -18,14 +20,22 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Adım 2 doğrulaması: örnek şablonu okuyup ayrıştırıyoruz. Renderer Adım 3'te geliyor.
-        val raw = assets.open("templates/soft_clock.json").bufferedReader().use { it.readText() }
-        val result = TemplateParser.parse(raw)
+        // Örnek şablonu okuyup ayrıştırıyoruz. Hata olursa uygulama kapanmaz, ekranda gösterilir.
+        val result: ParseResult = try {
+            val raw = assets.open("templates/soft_clock.json").bufferedReader().use { it.readText() }
+            TemplateParser.parse(raw)
+        } catch (e: Throwable) {
+            ParseResult.Failure(listOf("${e::class.simpleName}: ${e.message}"))
+        }
 
         setContent {
             MaterialTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    Column(modifier = Modifier.padding(24.dp)) {
+                    Column(
+                        modifier = Modifier
+                            .padding(24.dp)
+                            .verticalScroll(rememberScrollState()),
+                    ) {
                         Text("Subtile", style = MaterialTheme.typography.headlineMedium)
                         when (result) {
                             is ParseResult.Success -> {
