@@ -16,6 +16,102 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".widget.TickReceiver"
+            android:exported="false" />
+
+        <!-- 2x2 -->
+        <receiver android:name=".widget.IosClockDark" android:exported="true" android:label="Saat - Koyu">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+        <receiver android:name=".widget.IosClockLight" android:exported="true" android:label="Saat - Açık">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+        <receiver android:name=".widget.IosGradientClock" android:exported="true" android:label="Saat - Gradyan">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+        <receiver android:name=".widget.IosAnalogDark" android:exported="true" android:label="Analog - Koyu">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+        <receiver android:name=".widget.IosAnalogLight" android:exported="true" android:label="Analog - Açık">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+        <receiver android:name=".widget.IosDateLight" android:exported="true" android:label="Tarih - Açık">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+        <receiver android:name=".widget.IosDateDark" android:exported="true" android:label="Tarih - Koyu">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+        <receiver android:name=".widget.IosBatteryRing" android:exported="true" android:label="Pil - Halka">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2" />
+        </receiver>
+
+        <!-- 4x2 -->
+        <receiver android:name=".widget.IosClockWide" android:exported="true" android:label="Saat - Geniş">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_4x2" />
+        </receiver>
+        <receiver android:name=".widget.IosBatteryClock" android:exported="true" android:label="Pil ve Saat">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_4x2" />
+        </receiver>
+        <receiver android:name=".widget.IosGreeting" android:exported="true" android:label="Karşılama">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_4x2" />
+        </receiver>
+        <receiver android:name=".widget.IosWorldClock" android:exported="true" android:label="Dünya Saati">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_4x2" />
+        </receiver>
+
+        <!-- 4x4 -->
+        <receiver android:name=".widget.IosMonth" android:exported="true" android:label="Ay Takvimi">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_4x4" />
+        </receiver>
+
+        <!-- 4x1 -->
+        <receiver android:name=".widget.IosBatteryBar" android:exported="true" android:label="Pil - Çubuk">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_4x1" />
+        </receiver>
     </application>
 
 </manifest>
