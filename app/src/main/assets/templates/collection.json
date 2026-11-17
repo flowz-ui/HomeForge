@@ -1,0 +1,816 @@
+[
+  {
+    "schema": 1,
+    "id": "ios_clock_dark",
+    "name": "Saat - Koyu",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.5,
+        "y": 0.45,
+        "size": 34,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "center",
+        "format": "HH:mm"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.5,
+        "y": 0.72,
+        "size": 12,
+        "color": "#FF9F0A",
+        "font": "medium",
+        "align": "center",
+        "format": "EEE, d MMM",
+        "upper": true
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_clock_light",
+    "name": "Saat - Açık",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#F2F2F7",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.5,
+        "y": 0.45,
+        "size": 34,
+        "color": "#1C1C1E",
+        "font": "bold",
+        "align": "center",
+        "format": "HH:mm"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.5,
+        "y": 0.72,
+        "size": 12,
+        "color": "#FF3B30",
+        "font": "medium",
+        "align": "center",
+        "format": "EEE, d MMM",
+        "upper": true
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_clock_wide",
+    "name": "Saat - Geniş",
+    "size": {
+      "w": 4,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "greeting",
+        "x": 0.07,
+        "y": 0.22,
+        "size": 14,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "left"
+      },
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.07,
+        "y": 0.54,
+        "size": 54,
+        "color": "#FFFFFF",
+        "font": "light",
+        "align": "left",
+        "format": "HH:mm"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.07,
+        "y": 0.84,
+        "size": 14,
+        "color": "#FF9F0A",
+        "font": "medium",
+        "align": "left",
+        "format": "EEEE, d MMMM"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_analog_dark",
+    "name": "Analog - Koyu",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "analog_clock",
+        "x": 0.5,
+        "y": 0.5,
+        "size": 92,
+        "color": "#8E8E93",
+        "handColor": "#FFFFFF"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_analog_light",
+    "name": "Analog - Açık",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#F2F2F7",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "analog_clock",
+        "x": 0.5,
+        "y": 0.5,
+        "size": 92,
+        "color": "#8E8E93",
+        "handColor": "#1C1C1E"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_date_light",
+    "name": "Tarih - Açık",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#FFFFFF",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.12,
+        "y": 0.2,
+        "size": 13,
+        "color": "#FF3B30",
+        "font": "bold",
+        "align": "left",
+        "format": "EEEE",
+        "upper": true
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.12,
+        "y": 0.52,
+        "size": 54,
+        "color": "#1C1C1E",
+        "font": "regular",
+        "align": "left",
+        "format": "d"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.12,
+        "y": 0.84,
+        "size": 13,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "left",
+        "format": "MMMM"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_calendar"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_date_dark",
+    "name": "Tarih - Koyu",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.12,
+        "y": 0.2,
+        "size": 13,
+        "color": "#FF9F0A",
+        "font": "bold",
+        "align": "left",
+        "format": "EEEE",
+        "upper": true
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.12,
+        "y": 0.52,
+        "size": 54,
+        "color": "#FFFFFF",
+        "font": "regular",
+        "align": "left",
+        "format": "d"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.12,
+        "y": 0.84,
+        "size": 13,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "left",
+        "format": "MMMM"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_calendar"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_month",
+    "name": "Ay Takvimi",
+    "size": {
+      "w": 4,
+      "h": 4
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.07,
+        "y": 0.09,
+        "size": 16,
+        "color": "#FF9F0A",
+        "font": "bold",
+        "align": "left",
+        "format": "MMMM",
+        "upper": true
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.93,
+        "y": 0.09,
+        "size": 16,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "right",
+        "format": "yyyy"
+      },
+      {
+        "type": "month_grid",
+        "x": 0.06,
+        "y": 0.17,
+        "w": 0.88,
+        "h": 0.78,
+        "size": 12,
+        "color": "#FFFFFF",
+        "accent": "#FF9F0A"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_calendar"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_battery_ring",
+    "name": "Pil - Halka",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "battery",
+        "style": "ring",
+        "x": 0.5,
+        "y": 0.45,
+        "size": 70,
+        "color": "#32D74B"
+      },
+      {
+        "type": "text",
+        "source": "battery_percent",
+        "x": 0.5,
+        "y": 0.45,
+        "size": 16,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "center"
+      },
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.5,
+        "y": 0.89,
+        "size": 11,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "center",
+        "format": "HH:mm"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_battery"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_battery_bar",
+    "name": "Pil - Çubuk",
+    "size": {
+      "w": 4,
+      "h": 1
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 20
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "battery_percent",
+        "x": 0.06,
+        "y": 0.5,
+        "size": 15,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "left"
+      },
+      {
+        "type": "battery",
+        "style": "bar",
+        "x": 0.5,
+        "y": 0.5,
+        "size": 110,
+        "color": "#32D74B"
+      },
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.94,
+        "y": 0.5,
+        "size": 14,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "right",
+        "format": "HH:mm"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_battery"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_battery_clock",
+    "name": "Pil ve Saat",
+    "size": {
+      "w": 4,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.07,
+        "y": 0.46,
+        "size": 50,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "left",
+        "format": "HH:mm"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.07,
+        "y": 0.8,
+        "size": 14,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "left",
+        "format": "EEEE, d MMM"
+      },
+      {
+        "type": "battery",
+        "style": "ring",
+        "x": 0.83,
+        "y": 0.5,
+        "size": 64,
+        "color": "#32D74B"
+      },
+      {
+        "type": "text",
+        "source": "battery_percent",
+        "x": 0.83,
+        "y": 0.5,
+        "size": 14,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "center"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_battery"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_greeting",
+    "name": "Karşılama",
+    "size": {
+      "w": 4,
+      "h": 2
+    },
+    "background": {
+      "type": "gradient",
+      "colors": [
+        "#0A84FF",
+        "#5E5CE6"
+      ],
+      "angle": 135,
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "greeting",
+        "x": 0.07,
+        "y": 0.26,
+        "size": 20,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "left"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.07,
+        "y": 0.82,
+        "size": 13,
+        "color": "#CCFFFFFF",
+        "font": "medium",
+        "align": "left",
+        "format": "EEEE, d MMMM"
+      },
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.93,
+        "y": 0.62,
+        "size": 36,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "right",
+        "format": "HH:mm"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_world_clock",
+    "name": "Dünya Saati",
+    "size": {
+      "w": 4,
+      "h": 2
+    },
+    "background": {
+      "type": "solid",
+      "color": "#1C1C1E",
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "static",
+        "x": 0.08,
+        "y": 0.24,
+        "size": 13,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "left",
+        "text": "İstanbul"
+      },
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.08,
+        "y": 0.56,
+        "size": 34,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "left",
+        "format": "HH:mm",
+        "tz": "Europe/Istanbul"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.08,
+        "y": 0.84,
+        "size": 12,
+        "color": "#FF9F0A",
+        "font": "medium",
+        "align": "left",
+        "format": "EEEE",
+        "tz": "Europe/Istanbul"
+      },
+      {
+        "type": "shape",
+        "shape": "rect",
+        "x": 0.5,
+        "y": 0.2,
+        "w": 0.004,
+        "h": 0.6,
+        "color": "#3A3C40",
+        "radius": 0
+      },
+      {
+        "type": "text",
+        "source": "static",
+        "x": 0.56,
+        "y": 0.24,
+        "size": 13,
+        "color": "#8E8E93",
+        "font": "medium",
+        "align": "left",
+        "text": "New York"
+      },
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.56,
+        "y": 0.56,
+        "size": 34,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "left",
+        "format": "HH:mm",
+        "tz": "America/New_York"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.56,
+        "y": 0.84,
+        "size": 12,
+        "color": "#FF9F0A",
+        "font": "medium",
+        "align": "left",
+        "format": "EEEE",
+        "tz": "America/New_York"
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  },
+  {
+    "schema": 1,
+    "id": "ios_gradient_clock",
+    "name": "Saat - Gradyan",
+    "size": {
+      "w": 2,
+      "h": 2
+    },
+    "background": {
+      "type": "gradient",
+      "colors": [
+        "#FF9F0A",
+        "#FF375F"
+      ],
+      "angle": 160,
+      "radius": 22
+    },
+    "layers": [
+      {
+        "type": "text",
+        "source": "time",
+        "x": 0.5,
+        "y": 0.45,
+        "size": 34,
+        "color": "#FFFFFF",
+        "font": "bold",
+        "align": "center",
+        "format": "HH:mm"
+      },
+      {
+        "type": "text",
+        "source": "date",
+        "x": 0.5,
+        "y": 0.72,
+        "size": 12,
+        "color": "#CCFFFFFF",
+        "font": "medium",
+        "align": "center",
+        "format": "EEE, d MMM",
+        "upper": true
+      }
+    ],
+    "actions": [
+      {
+        "area": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "do": "open_clock_app"
+      }
+    ]
+  }
+      ]
