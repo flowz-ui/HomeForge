@@ -1,5 +1,6 @@
 package app.subtile.template
 
+import java.io.File
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -34,28 +35,36 @@ class TemplateParserTest {
     @Test
     fun rejectsBadColor() {
         val bad = valid.replace("#FF9F1C", "orange")
-        val result = TemplateParser.parse(bad)
-        assertTrue(result is ParseResult.Failure)
+        assertTrue(TemplateParser.parse(bad) is ParseResult.Failure)
     }
 
     @Test
     fun rejectsUnknownAction() {
         val bad = valid.replace("open_clock_app", "run_script")
-        val result = TemplateParser.parse(bad)
-        assertTrue(result is ParseResult.Failure)
+        assertTrue(TemplateParser.parse(bad) is ParseResult.Failure)
     }
 
     @Test
     fun rejectsOutOfRangePosition() {
         val bad = valid.replace("\"x\": 0.82", "\"x\": 1.8")
-        val result = TemplateParser.parse(bad)
-        assertTrue(result is ParseResult.Failure)
+        assertTrue(TemplateParser.parse(bad) is ParseResult.Failure)
     }
 
     @Test
     fun rejectsBrokenJson() {
-        val result = TemplateParser.parse("{ not json")
-        assertTrue(result is ParseResult.Failure)
+        assertTrue(TemplateParser.parse("{ not json") is ParseResult.Failure)
+    }
+
+    @Test
+    fun rejectsBadTimeZone() {
+        val bad = valid.replace("\"format\": \"HH:mm\"", "\"format\": \"HH:mm\", \"tz\": \"Mars/Olympus\"")
+        assertTrue(TemplateParser.parse(bad) is ParseResult.Failure)
+    }
+
+    @Test
+    fun rejectsBadDateFormat() {
+        val bad = valid.replace("\"format\": \"HH:mm\"", "\"format\": \"HH:mm {{\"")
+        assertTrue(TemplateParser.parse(bad) is ParseResult.Failure)
     }
 
     @Test
@@ -63,5 +72,17 @@ class TemplateParserTest {
         val first = (TemplateParser.parse(valid) as ParseResult.Success).template
         val second = (TemplateParser.parse(TemplateParser.toJson(first)) as ParseResult.Success).template
         assertEquals(first, second)
+    }
+
+    /** Resmi koleksiyondaki her şablon geçerli olmalı. Bozuk bir şablon derlemeyi kırmızı yapar. */
+    @Test
+    fun officialCollectionIsValid() {
+        val file = listOf(
+            File("src/main/assets/templates/collection.json"),
+            File("app/src/main/assets/templates/collection.json"),
+        ).first { it.exists() }
+        val result = TemplateParser.parseList(file.readText())
+        assertEquals("Hatalı şablonlar: ${result.errors}", emptyList<String>(), result.errors)
+        assertEquals(14, result.templates.size)
     }
 }
